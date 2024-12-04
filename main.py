@@ -55,8 +55,6 @@ def draw_grid():
     for i in range(6):
         pygame.draw.line(screen, gray, (5, (i * add_height) + add_height), (245, (i * add_height) + add_height), 5)
 
-
-
 run = True
 while run:
     timer.tick(fps)
