@@ -86,8 +86,8 @@ while run:
             run = False
         if event.type == pygame.MOUSEBUTTONDOWN:
             for i in range(len(boxes)):
-                if boxes[i][0].colliderect(event.pos):
+                if boxes[i][0].collidepoint(event.pos):
                     coords = boxes[i][1]
-                    clicked[coords[1]][coords[0]] += (-1)
+                    clicked[coords[1]][coords[0]] *= -1
     pygame.display.flip()
 pygame.quit()
