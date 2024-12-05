@@ -14,6 +14,7 @@ white = (255,255,255)
 gray = (128, 128, 128)
 green = (0,255,0)
 gold = (212, 175, 55)
+blue = (0, 255, 255)
 
 label_font = pygame.font.Font('./Fonts/Roboto/Roboto-Bold.ttf', 32)
 screen = pygame.display.set_mode([WIDTH,HEIGHT])
@@ -25,8 +26,13 @@ beats = 8
 instruments = 6
 boxes = []
 clicked = [[-1 for _ in range(beats)] for _ in range(instruments)]
+bpm = 240
+playing = True
+active_length = 0
+active_beat = 1
+beat_changed = True
 
-def draw_grid(clicks):
+def draw_grid(clicks, beat):
     left_box = pygame.draw.rect(screen, gray, [0,0,250, HEIGHT-195], 5)
     bottom_box = pygame.draw.rect(screen, gray, [0, HEIGHT-200, WIDTH, 200], 5)
     colors = [gray, black, white]
@@ -73,13 +79,15 @@ def draw_grid(clicks):
             pygame.draw.rect(screen, black, [i * ((WIDTH-250)//beats) + 250, (j*add_height), ((WIDTH - 200)//beats), ((HEIGHT-200)//instruments)], 2, 5)
 
             boxes.append((rect, (i,j)))
+
+    active = pygame.draw.rect(screen, blue, [beat * ((WIDTH - 250) // beats) + 250, 0, ((WIDTH - 200) // beats), instruments * add_height], 5, 3)
     return boxes
 
 run = True
 while run:
     timer.tick(fps)
     screen.fill(black)
-    boxes = draw_grid(clicked)
+    boxes = draw_grid(clicked, active_beat)
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -89,5 +97,20 @@ while run:
                 if boxes[i][0].collidepoint(event.pos):
                     coords = boxes[i][1]
                     clicked[coords[1]][coords[0]] *= -1
+
+    beat_length = 3600 // bpm
+
+    if playing:
+        if active_length < beat_length:
+            active_length += 1
+        else:
+            active_length = 0
+            if active_beat < beats - 1:
+                active_beat += 1
+                beat_changed = True
+            else:
+                active_beat = 0
+                beat_changed = True
+
     pygame.display.flip()
 pygame.quit()
