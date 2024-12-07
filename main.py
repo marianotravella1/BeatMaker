@@ -22,7 +22,7 @@ pygame.display.set_caption("Beat Maker")
 
 fps = 60
 timer = pygame.time.Clock()
-beats = 8
+beats = 32
 instruments = 6
 boxes = []
 clicked = [[-1 for _ in range(beats)] for _ in range(instruments)]
@@ -31,6 +31,27 @@ playing = True
 active_length = 0
 active_beat = 1
 beat_changed = True
+
+# load in sounds
+hi_hat = mixer.Sound("./Sounds/Basic808HiHat.wav")
+snare = mixer.Sound("./Sounds/Basic808Snare.wav")
+kick = mixer.Sound("./Sounds/Basic808Kick.wav")
+clap = mixer.Sound("./Sounds/Basic808Clap.wav")
+open_hi_hat = mixer.Sound("./Sounds/Basic808HiHat.wav")
+
+def play_notes():
+    for i in range(len(clicked)):
+        if clicked[i][active_beat] == 1:
+            if i == 0:
+                kick.play()
+            if i == 1:
+                clap.play()
+            if i == 2:
+                snare.play()
+            if i == 3:
+                hi_hat.play()
+            if i == 4:
+                open_hi_hat.play()
 
 def draw_grid(clicks, beat):
     left_box = pygame.draw.rect(screen, gray, [0,0,250, HEIGHT-195], 5)
@@ -88,6 +109,9 @@ while run:
     timer.tick(fps)
     screen.fill(black)
     boxes = draw_grid(clicked, active_beat)
+    if beat_changed:
+        play_notes()
+        beat_changed = False
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
