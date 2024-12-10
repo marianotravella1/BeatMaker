@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aced57b6-d69b-41f9-a378-17148d4bd5b4" name="Changes" comment="Play/Pause button" />
+    <list default="true" id="aced57b6-d69b-41f9-a378-17148d4bd5b4" name="Changes" comment="Deleted duplicated code">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -205,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733805040584</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Deleted duplicated code">
+      <option name="closed" value="true" />
+      <created>1733805504438</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733805504438</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -213,6 +224,7 @@
     <MESSAGE value="Grid colors" />
     <MESSAGE value="Select/Diselect squares" />
     <MESSAGE value="Play/Pause button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Play/Pause button" />
+    <MESSAGE value="Deleted duplicated code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted duplicated code" />
   </component>
 </project>
