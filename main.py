@@ -25,11 +25,11 @@ pygame.display.set_caption("Beat Maker")
 
 fps = 60
 timer = pygame.time.Clock()
-beats = 16
+beats = 8
 instruments = 6
 clicked = [[-1 for _ in range(beats)] for _ in range(instruments)]
 active_list = [1 for _ in range(instruments)]
-bpm = 400
+bpm = 350
 playing = True
 active_length = 0
 active_beat = 1
@@ -103,7 +103,10 @@ def draw_grid(clicks, beat, actives):
             if clicks[j][i] == -1:
                 color = gray
             else:
-                color = green
+                if actives[j] == 1:
+                    color = green
+                else:
+                    color = dark_gray
             rect = pygame.draw.rect(screen, color, [i * ((WIDTH - 250) // beats) + 255, (j * add_height) + 5,
                                                     ((WIDTH - 200) // beats) - 10,
                                                     ((HEIGHT - 200) // instruments) - 10], 0, 3)
