@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aced57b6-d69b-41f9-a378-17148d4bd5b4" name="Changes" comment="mute/unmute instruments functionality">
+    <list default="true" id="aced57b6-d69b-41f9-a378-17148d4bd5b4" name="Changes" comment="save menu button">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_beats.txt" beforeDir="false" afterPath="$PROJECT_DIR$/saved_beats.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +41,9 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2pjj8JMF8ihxA53WwcHlnJCjlrA" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -231,8 +235,43 @@
       <option name="project" value="LOCAL" />
       <updated>1733810367917</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="clear board button">
+      <option name="closed" value="true" />
+      <created>1733843648096</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1733843648096</updated>
+    </task>
+    <task id="LOCAL-00011" summary="save menu button">
+      <option name="closed" value="true" />
+      <created>1733859627636</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1733859627639</updated>
+    </task>
+    <task id="LOCAL-00012" summary="save menu button">
+      <option name="closed" value="true" />
+      <created>1733863788015</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1733863788015</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial grid" />
@@ -242,6 +281,8 @@
     <MESSAGE value="Deleted duplicated code" />
     <MESSAGE value="Add/Sub beats in loop" />
     <MESSAGE value="mute/unmute instruments functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="mute/unmute instruments functionality" />
+    <MESSAGE value="clear board button" />
+    <MESSAGE value="save menu button" />
+    <option name="LAST_COMMIT_MESSAGE" value="save menu button" />
   </component>
 </project>
