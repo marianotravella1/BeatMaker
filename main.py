@@ -24,20 +24,22 @@ fps = 60
 timer = pygame.time.Clock()
 beats = 32
 instruments = 6
-boxes = []
 clicked = [[-1 for _ in range(beats)] for _ in range(instruments)]
-bpm = 240
+bpm = 400
 playing = True
 active_length = 0
 active_beat = 1
 beat_changed = True
+boxes = []
 
 # load in sounds
 hi_hat = mixer.Sound("./Sounds/Basic808HiHat.wav")
 snare = mixer.Sound("./Sounds/Basic808Snare.wav")
 kick = mixer.Sound("./Sounds/Basic808Kick.wav")
 clap = mixer.Sound("./Sounds/Basic808Clap.wav")
-open_hi_hat = mixer.Sound("./Sounds/Basic808HiHat.wav")
+open_hi_hat = mixer.Sound("./Sounds/808OH_2.wav")
+crash = mixer.Sound("./Sounds/808Crash_2.wav")
+pygame.mixer.set_num_channels(instruments * 3)
 
 def play_notes():
     for i in range(len(clicked)):
@@ -51,12 +53,15 @@ def play_notes():
             if i == 3:
                 hi_hat.play()
             if i == 4:
+                crash.play()
+            if i == 5:
                 open_hi_hat.play()
 
 def draw_grid(clicks, beat):
     left_box = pygame.draw.rect(screen, gray, [0,0,250, HEIGHT-195], 5)
     bottom_box = pygame.draw.rect(screen, gray, [0, HEIGHT-200, WIDTH, 200], 5)
     colors = [gray, black, white]
+    boxes = []
 
     height = 30
     add_height = 92
