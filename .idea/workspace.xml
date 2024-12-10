@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aced57b6-d69b-41f9-a378-17148d4bd5b4" name="Changes" comment="Deleted duplicated code">
+    <list default="true" id="aced57b6-d69b-41f9-a378-17148d4bd5b4" name="Changes" comment="Add/Sub beats in loop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -216,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733805504438</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add/Sub beats in loop">
+      <option name="closed" value="true" />
+      <created>1733808105218</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1733808105220</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -225,6 +233,7 @@
     <MESSAGE value="Select/Diselect squares" />
     <MESSAGE value="Play/Pause button" />
     <MESSAGE value="Deleted duplicated code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleted duplicated code" />
+    <MESSAGE value="Add/Sub beats in loop" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add/Sub beats in loop" />
   </component>
 </project>

@@ -28,6 +28,7 @@ timer = pygame.time.Clock()
 beats = 16
 instruments = 6
 clicked = [[-1 for _ in range(beats)] for _ in range(instruments)]
+active_list = [1 for _ in range(instruments)]
 bpm = 400
 playing = True
 active_length = 0
@@ -47,7 +48,7 @@ pygame.mixer.set_num_channels(instruments * 3)
 
 def play_notes():
     for i in range(len(clicked)):
-        if clicked[i][active_beat] == 1:
+        if clicked[i][active_beat] == 1 and active_list[i] == 1:
             if i == 0:
                 kick.play()
             if i == 1:
@@ -62,36 +63,36 @@ def play_notes():
                 open_hi_hat.play()
 
 
-def draw_grid(clicks, beat):
+def draw_grid(clicks, beat, actives):
     left_box = pygame.draw.rect(screen, gray, [0, 0, 250, HEIGHT - 195], 5)
     bottom_box = pygame.draw.rect(screen, gray, [0, HEIGHT - 200, WIDTH, 200], 5)
-    colors = [gray, black, white]
+    colors = [gray, white, gray]
     boxes = []
 
     height = 30
     add_height = 92
 
-    kick_text = label_font.render('Kick', True, white)
+    kick_text = label_font.render('Kick', True, colors[actives[0]])
     screen.blit(kick_text, (18, height))
 
     height = height + add_height
-    clap_text = label_font.render('clap', True, white)
+    clap_text = label_font.render('clap', True, colors[actives[1]])
     screen.blit(clap_text, (18, height))
 
     height = height + add_height
-    snare_text = label_font.render('Snare', True, white)
+    snare_text = label_font.render('Snare', True, colors[actives[2]])
     screen.blit(snare_text, (18, height))
 
     height = height + add_height
-    hi_hat_text = label_font.render('Hi Hat', True, white)
+    hi_hat_text = label_font.render('Hi Hat', True, colors[actives[3]])
     screen.blit(hi_hat_text, (18, height))
 
     height = height + add_height
-    crash_text = label_font.render('Crash', True, white)
+    crash_text = label_font.render('Crash', True, colors[actives[4]])
     screen.blit(crash_text, (18, height))
 
     height = height + add_height
-    op_hi_hat_text = label_font.render('Open Hi-Hat', True, white)
+    op_hi_hat_text = label_font.render('Open Hi-Hat', True, colors[actives[5]])
     screen.blit(op_hi_hat_text, (18, height))
 
     for i in range(instruments):
@@ -126,7 +127,7 @@ run = True
 while run:
     timer.tick(fps)
     screen.fill(black)
-    boxes = draw_grid(clicked, active_beat)
+    boxes = draw_grid(clicked, active_beat, active_list)
     # lower menu buttons
     play_pause = pygame.draw.rect(screen, gray, [50, HEIGHT - 150, 200, 100], 0, 5)
     play_text = label_font.render('Play/Pause', True, white)
@@ -148,6 +149,7 @@ while run:
     sub_text = medium_font.render('-5', True, white)
     screen.blit(add_text, (520, HEIGHT - 140))
     screen.blit(sub_text, (520, HEIGHT - 90))
+
     # beat actions
     beats_rect = pygame.draw.rect(screen, gray, [600, HEIGHT - 150, 200, 100], 5, 5)
     beats_text = medium_font.render('Beats in loop', True, white)
@@ -160,6 +162,13 @@ while run:
     sub_text2 = medium_font.render('-1', True, white)
     screen.blit(add_text2, (820, HEIGHT - 140))
     screen.blit(sub_text2, (820, HEIGHT - 90))
+
+    # instrument rects
+    instrument_rects = []
+    for i in range(instruments):
+        rect = pygame.rect.Rect((5, i * 90), (250, 90))
+        instrument_rects.append(rect)
+
     if beat_changed:
         play_notes()
         beat_changed = False
@@ -191,6 +200,9 @@ while run:
                 beats -= 1
                 for i in range(len(clicked)):
                     clicked[i].pop(-1)
+            for i in range(len(instrument_rects)):
+                if instrument_rects[i].collidepoint(event.pos):
+                    active_list[i] *= -1
 
     beat_length = 3600 // bpm
 
