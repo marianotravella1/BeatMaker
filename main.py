@@ -62,29 +62,6 @@ def play_notes():
                 open_hi_hat.play()
 
 
-# load in sounds
-hi_hat = mixer.Sound("./Sounds/Basic808HiHat.wav")
-snare = mixer.Sound("./Sounds/Basic808Snare.wav")
-kick = mixer.Sound("./Sounds/Basic808Kick.wav")
-clap = mixer.Sound("./Sounds/Basic808Clap.wav")
-open_hi_hat = mixer.Sound("./Sounds/Basic808HiHat.wav")
-
-
-def play_notes():
-    for i in range(len(clicked)):
-        if clicked[i][active_beat] == 1:
-            if i == 0:
-                kick.play()
-            if i == 1:
-                clap.play()
-            if i == 2:
-                snare.play()
-            if i == 3:
-                hi_hat.play()
-            if i == 4:
-                open_hi_hat.play()
-
-
 def draw_grid(clicks, beat):
     left_box = pygame.draw.rect(screen, gray, [0, 0, 250, HEIGHT - 195], 5)
     bottom_box = pygame.draw.rect(screen, gray, [0, HEIGHT - 200, WIDTH, 200], 5)
