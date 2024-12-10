@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aced57b6-d69b-41f9-a378-17148d4bd5b4" name="Changes" comment="workspace updated">
+    <list default="true" id="aced57b6-d69b-41f9-a378-17148d4bd5b4" name="Changes" comment="Select/Diselect squares">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,11 +55,6 @@
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\maria\PycharmProjects\PythonProject\Sounds" />
-    </key>
-  </component>
   <component name="RunManager">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="ENV_FILES" value="" />
@@ -203,51 +199,13 @@
       <option name="project" value="LOCAL" />
       <updated>1733440522452</updated>
     </task>
-    <task id="LOCAL-00006" summary="Moving beat tracker added">
-      <option name="closed" value="true" />
-      <created>1733442672561</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1733442672561</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Sounds added and barely functioning">
-      <option name="closed" value="true" />
-      <created>1733535885997</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1733535885997</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Sounds added and barely functioning">
-      <option name="closed" value="true" />
-      <created>1733542668013</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1733542668014</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="6" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial grid" />
     <MESSAGE value="Grid colors" />
     <MESSAGE value="Select/Diselect squares" />
-    <MESSAGE value="Moving beat tracker added" />
-    <MESSAGE value="Sounds added and barely functioning" />
-    <MESSAGE value="workspace updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Select/Diselect squares" />
   </component>
 </project>
