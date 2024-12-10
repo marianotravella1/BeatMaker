@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aced57b6-d69b-41f9-a378-17148d4bd5b4" name="Changes" comment="Sounds added and barely functioning">
-      <change afterPath="$PROJECT_DIR$/Sounds/808Crash_2.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sounds/808OH_2.wav" afterDir="false" />
+    <list default="true" id="aced57b6-d69b-41f9-a378-17148d4bd5b4" name="Changes" comment="workspace updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,6 +247,7 @@
     <MESSAGE value="Select/Diselect squares" />
     <MESSAGE value="Moving beat tracker added" />
     <MESSAGE value="Sounds added and barely functioning" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sounds added and barely functioning" />
+    <MESSAGE value="workspace updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace updated" />
   </component>
 </project>
